@@ -3,11 +3,11 @@ const path = require("path");
 const app = express();
 
 // Serve static files from the Angular dist directory
-app.use(express.static(path.join(__dirname, "dist/<your-angular-app-name>")));
+app.use(express.static(path.join(__dirname, "dist/angular")));
 
 // Redirect all requests to the index.html
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/<your-angular-app-name>/index.html"));
+  res.sendFile(path.join(__dirname, "dist/angular/index.html"));
 });
 
 // Start the app by listening on the default Render port
